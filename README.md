@@ -1,5 +1,5 @@
 # reprograma-projeto-pratico
-Projeto prático da semana 7, com a professora Helena./br
+Projeto prático da semana 7, com a professora Helena
 
 Passo a passo do que foi feito para a criação da API solicitada:
 -> Criação de pasta;
