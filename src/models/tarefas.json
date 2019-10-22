@@ -3,24 +3,28 @@
         "id": 1,
         "dataInclusao": "12/08/2018",
         "concluido": "false",
-        "descricao": "Tarefa 1 - anda com fé"
+        "descricao": "Tarefa 1 - anda com fé",
+        "nomeColaborador": "Neusa"
     },
     {
         "id": 2,
         "dataInclusao": "26/01/2019",
         "concluido": "true",
-        "descricao": "Tarefa 2 - promessas"
+        "descricao": "Tarefa 2 - promessas",
+        "nomeColaborador": "Silvana"
     },
     {
         "id": 3,
         "dataInclusao": "19/06/2019",
         "concluido": "false",
-        "descricao": "Tarefa 3 - Macumba"
+        "descricao": "Tarefa 3 - Macumba",
+        "nomeColaborador": "Giuliana"
     },
     {
         "id": 4,
         "dataInclusao": "22/10/2019",
         "concluido": "true",
-        "descricao": "Tarefa Final - aleluia!"
+        "descricao": "Tarefa Final - aleluia!",
+        "nomeColaborador": "Isadora"
     }
 ]

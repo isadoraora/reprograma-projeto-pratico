@@ -12,3 +12,23 @@ exports.getById = (req, res) => {
     }
     res.status(200).send(tarefas.find(tarefas => tarefas.id == id))
 }
+
+exports.getConcluido = (req, res) => {
+    const tarefasConcluidas = tarefas.filter(tarefa => {
+        console.log(tarefa)
+        return tarefa.concluido == "true"
+    })
+    const duties = tarefasConcluidas.map(tarefa => tarefa.descricao)
+
+    res.status(200).send(duties)
+}
+
+exports.getNome = (req, res) => {
+    const id = req.params.id
+    const colaborador = tarefas.find(colaborador => colaborador.id == id)
+    if (!colaborador) {
+        res.send('Colaborador not found!')
+    }
+    const nome = colaborador.nomeColaborador
+    res.send(nome)
+}
