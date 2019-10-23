@@ -1,12 +1,14 @@
-# Reprograma-Projeto-Prático #
+# *Reprograma-Projeto-Prático * #
 
-####Projeto prático da semana 7, com a professora Helena.
+## Projeto prático da semana 7, com a professora Helena. ##
+
+##### Projeto sobre criação de uma API Rest com Nodejs, utilizando o método GET. Para tal foi necessário realizar o passo-a-passo detalhado abaixo: #####
 
 Passo a passo do que foi feito para a criação da API solicitada:
 -> Criação de pasta;
--> Execução do comando npm install --save express;
+-> Execução do comando npm install --save express; express é framework
 -> Execução do comando npm init -y; (ele que irá gerar nosso package.json)
--> Execução do comando npm install --save-dev nodemon;
+-> Execução do comando npm install --save-dev nodemon; ferramenta 
 -> Estrutura de pastas:
   File: server.js ->configuração. importamos módulo e definimos 1 porta para que seja executado.
   File: app.js    ->indicação das rotas, configuração de requisições. é aqui que vai tda configuração do BD e rotas.
