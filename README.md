@@ -1,4 +1,4 @@
-# *Reprograma-Projeto-Prático * #
+# *Reprograma-Projeto-Prático* #
 
 ## Projeto prático da semana 7, com a professora Helena. ##
 
