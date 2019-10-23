@@ -12,18 +12,26 @@ exports.getById = (req, res) => {
     }
     res.status(200).send(tarefas.find(tarefas => tarefas.id == id))
 }
+exports.getNome = (req, res) => {
+    const nomeColab = req.params.nome
+    res.status(200).send(tarefas.filter(tarefa => tarefa.nomeColaborador == nomeColab))
+}
+// exports.getNome = (req, res) => {
+//     const nomeColaborador = req.params.nome
+
+//     if (!nomeColaborador) {
+//         res.redirect(301, "https://www.freecodecamp.org/")
+//     }
+
+//     res.status(200).send(tarefas.filter(tarefa => tarefa.nomeColaborador == nomeColaborador))
+// }
 
 exports.getConcluido = (req, res) => {
-    const tarefasConcluidas = tarefas.filter(tarefa => {
-        console.log(tarefa)
-        return tarefa.concluido == "true"
-    })
-    const duties = tarefasConcluidas.map(tarefa => tarefa.descricao)
-
-    res.status(200).send(duties)
+    const tarefasConcluidas = tarefas.filter(tarefa => tarefa.concluido == "true")
+    res.status(200).send(tarefasConcluidas)
 }
 
-exports.getNome = (req, res) => {
+exports.getColaborador = (req, res) => {
     const id = req.params.id
     const colaborador = tarefas.find(colaborador => colaborador.id == id)
     if (!colaborador) {
