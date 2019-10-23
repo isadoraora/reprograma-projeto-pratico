@@ -26,7 +26,7 @@
  
 ###### 8. File: .gitignore->Vai conter apenas 'node_modules' dentro dele. Dessa forma não carregamos o pacote node_modules, que é gigante. ######
   
-#####  9. *Folder: src:*
+#####  9. Folder: src:
   
 ###### 10. Routes(definição das rotas e dos verbos. Nesse projeto utilizei apenas o verbo GET.)
           
