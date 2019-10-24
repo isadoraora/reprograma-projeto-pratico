@@ -54,6 +54,4 @@
 ###### ('/:id/colaborador', controller.getNome)
 
 ###### Lembrando que foi utilizado apenas o verbo GET nesse exercício.
-
-   
     
