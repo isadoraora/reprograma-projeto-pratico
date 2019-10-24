@@ -1,4 +1,6 @@
 const tarefas = require('../models/tarefas.json');
+const express = require('express')
+const app = express()
 
 exports.get = (req, res) => {
     console.log(req.url)
@@ -12,18 +14,17 @@ exports.getById = (req, res) => {
     }
     res.status(200).send(tarefas.find(tarefas => tarefas.id == id))
 }
-
-exports.getConcluido = (req, res) => {
-    const tarefasConcluidas = tarefas.filter(tarefa => {
-        console.log(tarefa)
-        return tarefa.concluido == "true"
-    })
-    const duties = tarefasConcluidas.map(tarefa => tarefa.descricao)
-
-    res.status(200).send(duties)
+exports.getNome = (req, res) => {
+    const nomeColab = req.params.nome
+    res.status(200).send(tarefas.filter(tarefa => tarefa.nomeColaborador == nomeColab))
 }
 
-exports.getNome = (req, res) => {
+exports.getConcluido = (req, res) => {
+    const tarefasConcluidas = tarefas.filter(tarefa => tarefa.concluido == "true")
+    res.status(200).send(tarefasConcluidas)
+}
+
+exports.getColaborador = (req, res) => {
     const id = req.params.id
     const colaborador = tarefas.find(colaborador => colaborador.id == id)
     if (!colaborador) {
@@ -46,3 +47,11 @@ exports.getData = (req, res) => {
     
     console.log(arrData)
 }
+
+exports.getDatas = (req, res) => {
+    const data = tarefas.sort(function (a, b) {
+        return new Date(a.dataInclusao) - new Date(b.dataConclusao)
+    })
+    res.send(data)
+}
+
