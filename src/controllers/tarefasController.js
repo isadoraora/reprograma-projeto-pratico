@@ -33,3 +33,9 @@ exports.getColaborador = (req, res) => {
     const nome = colaborador.nomeColaborador
     res.send(nome)
 }
+exports.getDatas = (req, res) => {
+    const data = tarefas.sort(function (a, b) {
+        return new Date(a.dataInclusao) - new Date(b.dataConclusao)
+    })
+    res.send(data)
+}
