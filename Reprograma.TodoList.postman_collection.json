@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "2b413db5-7983-4acb-b948-a3ccc70fe587",
+		"name": "Reprograma.TodoList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tarefas",
+			"item": [
+				{
+					"name": "TarefasListar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tarefas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tarefas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TarefasConcluido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tarefas/concluido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tarefas",
+								"concluido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TarefasPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tarefas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tarefas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TarefasColaborador",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tarefas/Isadora",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tarefas",
+								"Isadora"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
