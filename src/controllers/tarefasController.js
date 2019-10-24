@@ -1,4 +1,6 @@
 const tarefas = require('../models/tarefas.json');
+const express = require('express')
+const app = express()
 
 exports.get = (req, res) => {
     console.log(req.url)
@@ -16,15 +18,6 @@ exports.getNome = (req, res) => {
     const nomeColab = req.params.nome
     res.status(200).send(tarefas.filter(tarefa => tarefa.nomeColaborador == nomeColab))
 }
-// exports.getNome = (req, res) => {
-//     const nomeColaborador = req.params.nome
-
-//     if (!nomeColaborador) {
-//         res.redirect(301, "https://www.freecodecamp.org/")
-//     }
-
-//     res.status(200).send(tarefas.filter(tarefa => tarefa.nomeColaborador == nomeColaborador))
-// }
 
 exports.getConcluido = (req, res) => {
     const tarefasConcluidas = tarefas.filter(tarefa => tarefa.concluido == "true")
