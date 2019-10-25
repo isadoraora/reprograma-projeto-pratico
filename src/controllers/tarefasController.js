@@ -42,13 +42,21 @@ exports.getConcluido = (req, res) => {
     res.status(200).send(tarefasConcluidas)
 }
 
-// exports.getColaborador = (req, res) => {
-//     const id = req.params.id
-//     const colaborador = tarefas.find(colaborador => colaborador.id == id)
-//     if (!colaborador) {
-//         res.send('Colaborador not found!')
-//     }
-//     const nome = colaborador.nomeColaborador
-//     res.send(nome)
-// }
+exports.getColaborador = (req, res) => {
+    const id = req.params.id
+    const colaborador = tarefas.find(colaborador => colaborador.id == id)
+    if (!colaborador) {
+        res.send('Colaborador not found!')
+    }
+    const nome = colaborador.nomeColaborador
+    res.send(nome)
+}
+exports.getData = (req, res) => {
+    const dataIn = tarefas[1].dataInclusao
+    const dataSplit = dataIn.split('/')
+    const datinha = new Date(dataSplit[2], dataSplit[1] - 1, dataSplit[0])
+    res.status(200).send(datinha)
+
+    
+}
 
