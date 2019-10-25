@@ -8,7 +8,8 @@ router.get('/data', controller.getData)
 router.get('/:nome', controller.getNome)
 router.get('/:id', controller.getById)
 router.get('/:id/colaborador', controller.getNome)
-router.get('/:id/colaborador', controller.getColaborador)
+// router.get('/:id/colaborador', controller.getColaborador)
+
 
 
 module.exports = router;
