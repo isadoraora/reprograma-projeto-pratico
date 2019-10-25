@@ -1,6 +1,4 @@
 const tarefas = require('../models/tarefas.json');
-const express = require('express')
-const app = express()
 
 exports.get = (req, res) => {
     console.log(req.url)
@@ -12,7 +10,7 @@ exports.getById = (req, res) => {
     if (id > 4 || id <= 0) {
         res.redirect(301, "https://www.freecodecamp.org/")
     }
-    res.status(200).send(tarefas.find(tarefas => tarefas.id == id))
+    res.status(200).send(tarefas.find(tarefa => tarefa.id == id))
 }
 exports.getNome = (req, res) => {
     const nomeColab = req.params.nome
@@ -39,7 +37,7 @@ exports.getData = (req, res) => {
     const datinha = new Date(dataSplit[2], dataSplit[1] - 1, dataSplit[0])
     res.status(200).send(datinha)
 
-    
+    //listar as tarefas por data de inclusão, das mais novas pras mais antigas
 }
 
 
