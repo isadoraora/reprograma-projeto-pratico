@@ -33,25 +33,14 @@ exports.getColaborador = (req, res) => {
     const nome = colaborador.nomeColaborador
     res.send(nome)
 }
-
-// const datas = tarefas.sort(function (a, b) {
-//     return new Date(a.dataAlteracao) - new Date(b.dataInclusao)
-//     res.status(200).send(datas)
-// });
-
 exports.getData = (req, res) => {
-    const id = req.params.id
-    const tarefa = tarefas.find(tarefa => tarefa.id == id) 
-    const data = tarefa.dataInclusao
-    const arrData = data.split('/')
+    const dataIn = tarefas[1].dataInclusao
+    const dataSplit = dataIn.split('/')
+    const datinha = new Date(dataSplit[2], dataSplit[1] - 1, dataSplit[0])
+    res.status(200).send(datinha)
+
     
-    console.log(arrData)
 }
 
-exports.getDatas = (req, res) => {
-    const data = tarefas.sort(function (a, b) {
-        return new Date(a.dataInclusao) - new Date(b.dataConclusao)
-    })
-    res.send(data)
-}
+
 
